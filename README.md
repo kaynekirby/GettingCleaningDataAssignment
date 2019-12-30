@@ -44,3 +44,7 @@ The datasets:
     - A 561-feature vector with time and frequency domain variables.
     - Its activity label.
     - An identifier of the subject who carried out the experiment.
+  Notes about each data file:
+    subject_TRAINTEST.txt - 7,352 records, identifies which of the 30 volunteers is being recorded
+    y_TRAINTEST.txt - 7,352 records, identifies which of the 6 activities is being performed
+    x_TRAINTEST.txt - 7,352 records, contains the measures for each of the (561?) features (see features.txt)
