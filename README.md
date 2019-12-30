@@ -48,3 +48,16 @@ The datasets:
     subject_TRAINTEST.txt - identifies which of the 30 volunteers is being recorded
     y_TRAINTEST.txt - identifies which of the 6 activities is being performed
     x_TRAINTEST.txt - contains the measures for each of the 561 features (see features.txt)
+
+Combining into one dataset:
+  Features.txt - used to provide labels for the 561 columns in the x_TRAINTEST.txt dataset
+  Bind columns from subject_TRAINTEST.txt, y_TRAINTEST.txt, and x_TRAINTEST.txt files
+  
+Restricting to features with mean and standard deviation:
+  Simply filtering on those features which have the string "mean" or "std" returns 86 of the 561 features.  Note: most of these match up with the original feature list.  Those that are variations on the original list (angle, etc) are included as well.
+  The breakdown of the 86 variables is as follows:
+    30 = the 5 "t/XYZ" variables, x3 (for each of X/Y/Z), x2 (for each of Mean/Std)
+    10 = the 5 "t/Mag" variables, x2 (for each of Mean/Std)
+    27 = the 3 "f/XYZ" variables, x3 (for each of X/Y/Z), x3 (for each of Mean/Std/MeanFreq).  Note: unclear what MeanFreq is...
+    12 = the 4 "f/Mag" variables, x3 (for each of Mean/Std/MeanFreq).  Note: unclear what MeanFreq is...
+    7 = "angle" variables, for 4 "tBodyMean" variables and 3 "gravityMean" variables X/Y/Z.  Note: unclear what "angle" is accomplishing...
